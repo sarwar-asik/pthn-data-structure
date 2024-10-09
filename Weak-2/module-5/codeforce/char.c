@@ -1,10 +1,9 @@
 #include<stdio.h>
 
 
-// https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/N
+// https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/P
 int main(){
-    // convert the char input to capital 
-    ///and capital >small
+    // convert the char input to capital and capital >small
 
     printf("Enter the char\n");
     char letter;
@@ -12,7 +11,10 @@ int main(){
     if(letter>='a'&&letter<='z' ){
         char capital = letter-32;
         printf("%c",capital);
-
+    }
+    else{
+        char small = letter+32;
+        printf("%c",small);
     }
 
     return 0;
