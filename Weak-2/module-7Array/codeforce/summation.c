@@ -3,7 +3,6 @@
 // https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/A
 int main() {
     // Write C code here
-    printf("ENter element number\n");
   long long  int N;
   
     scanf("%lld",&N);
@@ -14,15 +13,11 @@ int main() {
         // printf("%lld\n",arr[i]);
         sum =sum+arr[i];
     }
-    
-    // -5 =>-5+10=5
-    // -7 =>-7+14
-    // printf(" the array is %d",arr[N]);
     if(sum<0){
         long long int absolute =sum+(sum*(-2));
-        printf("%lld",absolute);
+        printf("%lld\n",absolute);
     }else{
-        printf("%lld",sum);
+        printf("%lld\n",sum);
     }
     
     
