@@ -5,14 +5,26 @@
 int main() {
     // Write C code here
    
-    long long int N;
-     scanf("%lld",&N);
-     for(long long int i =1; i<=N;i++){
-         if(N%i==0){
-             printf("%lld\n",i);
-         }
-     }
+     long int N;
+     scanf("%ld",&N);
+    //  printf("%ld\n",N);
+     long int first = N/10;
+    //  printf("%ld\n",first);
+     long int second = N%10;
+    //  printf("first %ld second %ld",first,second);
     
+     if(first ==0 || second==0){
+             printf("No\n");
+      }
+      
+    else if((first%second==0)|| (second%first==0)){
+       
+         printf("Yes\n");
+     }else{
+         printf("No\n");
+     }
+     
+     
 
     return 0;
 }
