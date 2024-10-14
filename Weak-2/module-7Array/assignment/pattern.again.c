@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-
+// https://www.hackerrank.com/contests/c-week-1-a-assignment-2/challenges/n-kites
 int main() {
    long int N;
  scanf("%ld",&N);
