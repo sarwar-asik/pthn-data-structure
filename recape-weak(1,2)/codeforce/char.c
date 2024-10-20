@@ -2,7 +2,6 @@
 #include <stdio.h>
 // https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/N
 int main() {
-
     // Write C code here
     // printf("Try programiz.pro");
     long int A,B;
@@ -26,6 +25,7 @@ int main() {
         printf("Wrong");
     }
     
-     
+
+
     return 0;
 }
