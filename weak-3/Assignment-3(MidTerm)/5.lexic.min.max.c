@@ -10,7 +10,7 @@ int main() {
     
     char maximumValue[100], minumumValue[100];
     strcpy(maximumValue, string1);
-strcpy(minumumValue, string1);
+    strcpy(minumumValue, string1);
 
     
     if (strcmp(string2, maximumValue) > 0) {
