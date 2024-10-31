@@ -7,6 +7,7 @@ int main(){
   int **y =&x;
   printf("a= %d x= %d , y= %d\n",a,&x,**y); ///! here y is pointer of pointer
 
+
   return 0;
 
 }
