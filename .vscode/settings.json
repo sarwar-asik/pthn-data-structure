@@ -1,7 +1,19 @@
 {
     "files.associations": {
         ".env*": "dotenv",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "array": "c",
+        "*.tcc": "c",
+        "functional": "c",
+        "random": "c",
+        "format": "c",
+        "new": "c",
+        "ostream": "c",
+        "span": "c",
+        "streambuf": "c",
+        "type_traits": "c",
+        "tuple": "c",
+        "text_encoding": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
