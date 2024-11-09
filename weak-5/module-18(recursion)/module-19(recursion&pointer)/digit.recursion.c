@@ -1,5 +1,10 @@
 # include<stdio.h>
 
+//! 3 
+// 123 432 2345
+// !3 2 1 
+// 2 3 4 
+// 5 4 3 2 
 
 void digitFunc(int n){
  
