@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// https://www.hackerrank.com/contests/b6-final-c/challenges/jadu-matrix/problem
 int main()
 {
   int N,M;
