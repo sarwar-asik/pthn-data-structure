@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+// https://www.hackerrank.com/contests/b6-assignment-03-c/challenges/unit-matrix
 int main() {
    long long int n;
     scanf("%lld",&n);
