@@ -2,6 +2,15 @@
 #include <stdio.h>
 // https://www.hackerrank.com/contests/b6-final-c/challenges/swap-in-matrix/submissions/code/1385171018
 
+
+// 3 4
+// 1 2 3 4
+// 5 6 7 8
+// 6 5 4 2
+
+// 2 5 4 6 
+// 8 6 7 5 
+// 4 2 3 1 
 int main()
 {
     // printf("Hello, World!\n");

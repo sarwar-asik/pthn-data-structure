@@ -13,7 +13,8 @@
         "streambuf": "c",
         "type_traits": "c",
         "tuple": "c",
-        "text_encoding": "c"
+        "text_encoding": "c",
+        "algorithm": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
