@@ -17,3 +17,9 @@
 Squere, Diagonal, and Scaler
 - Square Matrix(row = column)
 -
+
+## Module-15 (dynamic pointer):
+
+- array pointer
+- dynamic array
+- pointer of pointer 

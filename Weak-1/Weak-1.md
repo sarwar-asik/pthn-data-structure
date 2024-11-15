@@ -2,6 +2,8 @@
 
 
 ### different type scan & print
+- input and output
+- for loop
 ### problem
 
 ```c

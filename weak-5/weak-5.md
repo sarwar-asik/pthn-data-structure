@@ -5,3 +5,5 @@
 - 3. array recursion with function
 - 4. call by value of function
 - 5. call by reference of function
+- 6. array sum with recursion with function
+- 7.
