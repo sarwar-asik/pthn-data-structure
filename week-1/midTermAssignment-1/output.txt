@@ -1,5 +1,5 @@
-YES
-NO
-YES
-NO
-NO
+2 bob B 60
+3 charlie C 50
+1 alice A 90
+1 alice A 75
+1 alice A 85
