@@ -8,19 +8,19 @@ int main() {
     for(int m = 0; m < T; m++){
         int N,T;
         cin >> N >> T;
-        int A[N];
-        for(int i = 0; i < N; i++){
-            cin >> A[i];
+        int Array[N];
+        for(int in = 0; in < N; in++){
+            cin >> Array[in];
         }
-        sort(A,A+N);
+        sort(Array,Array+N);
         int count = 0;
-        for(int i = 0; i < N-1; i++){
-          for(int j = i+1; j < N; j++){
-    for(int k = j+1; k < N; k++){
-                    
-                    if(A[i]+A[j]+A[k] == T){
-                        count++;
-                    }
+    for(int i = 0; i < N-1; i++){
+      for(int j = i+1; j < N; j++){
+        for(int k = j+1; k < N; k++){
+    if(Array[i]+Array[j]+Array[k] == T){
+      count++;
+    }
+            
                 }
             }
         }
