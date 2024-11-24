@@ -1,16 +1,5 @@
-H e l l l o   S t r i n g 
-H
-g
-H
-e
-l
-l
-l
-o
- 
-S
-t
-r
-i
-n
-g
+hello brothers, kmn acho
+hello
+brothers,
+kmn
+acho
