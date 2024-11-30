@@ -11,6 +11,8 @@ class Cricketer {
     }
 };
 int main() {
+  string s = "hello";
+
     // main code here
     Cricketer* Tamim = new Cricketer("Bangladesh", 7);
     // cout<<Tamim->country<<" "<<Tamim->jersey<<endl;
