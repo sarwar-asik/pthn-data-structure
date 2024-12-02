@@ -1,0 +1,3 @@
+Emam 1 100
+Mohammad 2 100
+Ahmed 3 76
