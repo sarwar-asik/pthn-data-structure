@@ -10,6 +10,7 @@ class Cricketer {
         this->jersey = jersey;
     }
 };
+
 int main() {
   string s = "hello";
 

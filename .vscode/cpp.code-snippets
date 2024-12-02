@@ -1,6 +1,6 @@
 {
 	"Start File Template": {
-	  "prefix": "startfile",
+	  "prefix": "cpp",
 	  "body": [
 		"#include<bits/stdc++.h>",
 		"using namespace std;",
@@ -11,6 +11,7 @@
 		"}"
 	  ],
 	  "description": "Insert a basic C++ file structure"
-	}
+	},
+	
   }
   
