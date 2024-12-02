@@ -10,9 +10,8 @@ class Cricketer {
         this->jersey = jersey;
     }
 };
-int main() {
-  string s = "hello";
 
+int main() {
     // main code here
     Cricketer* Tamim = new Cricketer("Bangladesh", 7);
     // cout<<Tamim->country<<" "<<Tamim->jersey<<endl;
