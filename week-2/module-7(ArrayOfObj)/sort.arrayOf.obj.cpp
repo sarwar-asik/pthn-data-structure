@@ -26,14 +26,13 @@ int main() {
     Student arr[n];
     for (int i = 0; i < n; i++){
         cin >> arr[i].name >> arr[i].roll >> arr[i].marks;
-
     } 
 
 //    sort(arr,arr+n); not correct
 
 
 
-sort(arr,arr+n,compFunc);
+  sort(arr,arr+n,compFunc);
     for (int i = 0; i < n; i++){
         cout << arr[i].name << " " << arr[i].roll << " " << arr[i].marks << endl;
     }
