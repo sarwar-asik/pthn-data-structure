@@ -1,5 +1,6 @@
-
-36 Ahsan 9 C
-85 Sakib 10 A
-90 Rakib 7 B
-
+rakib 1 E 1002 94 88
+jessica 4 F 1005 94 88
+sakib 8 M 1003 34 88
+noname 8 R 1006 17 61
+bokib 3 Q 1004 93 58
+akib 2 R 1001 32 53
