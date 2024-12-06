@@ -9,7 +9,6 @@ int main() {
     stringstream S2(S);
     string word;
     bool isFound = false;
-    
     while (S2 >> word)
     {
         if(word=="Jessica"){
