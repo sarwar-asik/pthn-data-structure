@@ -6,7 +6,6 @@ class Student{
     string name;
     int roll;
     int marks;
-
 };
 
 bool compFunc(Student a,Student b){
