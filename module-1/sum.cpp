@@ -14,7 +14,7 @@ int main() {
  }
   cout << sum << endl;
 
-// formula-2
+   // formula-2
   int sum2 = (n * (n + 1)) / 2;
    cout << sum2 << endl;
 
