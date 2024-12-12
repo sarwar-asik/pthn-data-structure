@@ -1,0 +1,17 @@
+{
+	"Start File Template": {
+	  "prefix": "cpp",
+	  "body": [
+		"#include<bits/stdc++.h>",
+		"using namespace std;",
+		"",
+		"int main() {",
+		"    // main code here",
+		"    return 0;",
+		"}"
+	  ],
+	  "description": "Insert a basic C++ file structure"
+	},
+	
+  }
+  
