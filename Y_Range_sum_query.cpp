@@ -19,7 +19,7 @@ for(int i=2;i<=n;i++){
 
     // cout<<prefix[i-1]<<" ="<<endl;
     // cout<<prefix[i]<<" ="<<endl;
-    prefix[i]=prefix[i-1]+prefix[i];
+    prefix[i]=prefix[i-1]+v[i];
     // cout<<prefix[i]<<":" << i<<endl;
 }
 
