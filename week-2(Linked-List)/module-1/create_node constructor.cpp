@@ -11,6 +11,7 @@ class Node
       this->next=NULL;
     }
 };
+
 int main() {
     Node a(10),b(20),c(30);
    
