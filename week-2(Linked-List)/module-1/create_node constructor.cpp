@@ -12,7 +12,6 @@ class Node
     }
 };
 
-
 int main() {
     Node a(10),b(20),c(30);
    
