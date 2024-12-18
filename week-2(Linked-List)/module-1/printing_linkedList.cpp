@@ -23,7 +23,6 @@ int main() {
     b->next=c;
 
     // ! raw way-1
-
     // cout << "head is "<< head->val<<endl;
     // cout << "a is " << head->next->val<<endl;
     // cout << "b is " << head->next->next->val<<endl;
