@@ -1,3 +1,2 @@
-  // head->next=a;
-    // a->next=b;
-    // b->next=c;
+    // insert_at_tail(head,tail,50);
+    // insert_at_tail(head,tail,60);
