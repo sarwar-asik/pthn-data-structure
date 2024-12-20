@@ -12,6 +12,6 @@ int main() {
     // main code here
 
     int n=5;
-    rec(1,n);
+    rec(1,n); //! O(N)
     return 0;
 }
