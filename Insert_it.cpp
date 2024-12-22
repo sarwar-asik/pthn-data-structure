@@ -12,6 +12,7 @@ int main() {
     for(int i=0; i<N; i++){
         cin >> A[i];
         // CombArr[i]  =A[i];
+        
     }
     cin >> M;
     vector<long long>B(M);
