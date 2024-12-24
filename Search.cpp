@@ -68,6 +68,11 @@ int main() {
       long long   int V;
         cin >> V;
         print_linked_list(head,V);
+        while(head!=NULL){
+          Node* tempDel = head;
+          head =head->next;
+          delete  tempDel;
+        }
 
     }
     

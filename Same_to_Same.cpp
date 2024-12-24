@@ -50,10 +50,13 @@ tail=tail->next;
    while(true){
         cin >> val2;
          if(val2 ==-1){
+            delete temp;
             break;
         }
            if(temp->val!=val2){
                flag =0;
+            delete temp;
+
                break;
             }
        
