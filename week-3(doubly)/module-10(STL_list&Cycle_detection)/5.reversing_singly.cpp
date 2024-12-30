@@ -29,25 +29,27 @@ tail->next=newNode;
 tail=tail->next;
 };
 
-// void print_linked_list(Node*head){
-//   Node*temp= head;
-  
-//   while(temp!=NULL){
-//       cout<<temp->val<<endl;
-//       temp=temp->next;
-//   }  
-// };
 
-
-void print_reverse_function(Node *temp){
-    if(temp==NULL){
+void reverse_singly_linked_list(Node* &head,Node* &tail,Node * temp){
+    if(temp->next==NULL){
+        head = temp;
         return;
     }  
-    print_reverse_function(temp->next);  //! recursion
-    cout << temp->val<<endl;
+    reverse_singly_linked_list(head,tail,temp->next);  //! recursion
+    // cout << temp->val<<" ";
+    temp->next->next=temp;
+    temp->next=NULL;
+    tail=temp;
 
 }
-
+void print_linked_list(Node*head){
+  Node*temp= head;
+  
+  while(temp!=NULL){
+      cout<<temp->val<<" ";
+      temp=temp->next;
+  }  
+};
 int main() {
   
   Node* head= NULL;
@@ -61,7 +63,15 @@ int main() {
     insert_at_tail(head,tail,val); //!O(1)
   }
 //   print_linked_list(head);
-print_reverse_function(head);
+reverse_singly_linked_list(head,tail,head);
+
+print_linked_list(head);
+
+cout << endl;
+cout << "head is now = "<< head->val<<endl;
+cout << "tail is now = "<< tail->val<<endl;
+
+
 
     return 0; 
 }  
