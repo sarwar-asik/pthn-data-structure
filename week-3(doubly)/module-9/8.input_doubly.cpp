@@ -20,46 +20,45 @@ void print_forward(Node* head){
   }
   cout <<endl;
 };
-
 void print_backward(Node* tail){
   Node* tmp = tail;
-  while(tmp!=NULL){    cout << tmp->val<< " ";
+  while(tmp!=NULL){
+    cout << tmp->val<< " ";
     tmp = tmp->prev;
   }
   cout <<endl;
 };
-void insert_at_any_pos (Node*&head, int pos,int val){
-    Node* NewNode = new Node(val);
-    Node* tmp = head;
-    for(int i =1; i<pos;i++){
-        tmp = tmp->next;
-    }
-    // cout<< tmp->val<< endl;
-    NewNode->next= tmp->next;
-    tmp->next->prev = NewNode;
-    tmp->next = NewNode;
 
+
+void insert_at_tail (Node*&head, Node* &tail,int val){
+  Node* newNode = new Node(val);
+  if(head ==NULL){
+    head = newNode;
+    tail = newNode;
+    return;
+  }
+  tail->next= newNode;
+  newNode->prev = tail;
+  tail = newNode;
 }
 
 
 
 int main() {
     // main code here
-    Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* tail = new Node(30);
+    Node* head =NULL;
+    Node* tail =NULL;
 
-   head->next =a;
-   a->prev=head;
+    int val;
+    while(true){
+      cin >> val;
+      if(val == -1) {break;};
+         insert_at_tail(head,tail,val);
+   
+    }
 
-   a->next=tail;
-   tail->prev=a;
 
-
-  insert_at_any_pos(head,2,50);
-  insert_at_any_pos(head,3,500);
   print_forward(head);
-
 
   print_backward(tail);
 
