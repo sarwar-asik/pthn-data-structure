@@ -15,14 +15,25 @@ int main() {
     
     cout<<"size = "<<l.size()<<endl;
 
+//! clear the list
+    // l.clear();  
+    // if(l.empty()){ // ! check list is empty or not
+    //     cout<<"list is empty"<<endl;
+    // }
+
+
     // ! print begin
     // cout <<"begin= "<< *l.begin() <<endl;
     for(auto it= l.begin();it!=l.end();it++){ //iterate bcz it have no index
         cout<<*it<<endl;
     }
+
+
+
+    // resize the list
+    l.resize(15);
+
     cout<< "print-2";
-
-
     for(int val:l){
         cout<<val<<endl;
     }

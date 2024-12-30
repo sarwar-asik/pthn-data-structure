@@ -1,11 +1,1 @@
-size = 5
-1
-2
-4
-5
-76
-print-21
-2
-4
-5
-76
+cycle is detected
