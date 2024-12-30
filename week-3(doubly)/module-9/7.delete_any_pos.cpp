@@ -12,6 +12,7 @@ class Node
       this->prev=NULL;
     }
 };
+
 void print_forward(Node* head){
   Node* tmp = head;
   while(tmp!=NULL){
@@ -20,26 +21,28 @@ void print_forward(Node* head){
   }
   cout <<endl;
 };
-
 void print_backward(Node* tail){
   Node* tmp = tail;
-  while(tmp!=NULL){    cout << tmp->val<< " ";
+  while(tmp!=NULL){
+    cout << tmp->val<< " ";
     tmp = tmp->prev;
   }
   cout <<endl;
 };
-void insert_at_any_pos (Node*&head, int pos,int val){
-    Node* NewNode = new Node(val);
+  void delete_at_any (Node*&head, int index){
+   
     Node* tmp = head;
-    for(int i =1; i<pos;i++){
+    for(int i =1; i<index;i++){
         tmp = tmp->next;
     }
-    // cout<< tmp->val<< endl;
-    NewNode->next= tmp->next;
-    tmp->next->prev = NewNode;
-    tmp->next = NewNode;
+   Node *deleteNode = tmp->next;
+   tmp->next= tmp->next->next;
+   tmp->next->prev= tmp;
+   delete deleteNode;
 
-}
+
+  
+    }
 
 
 
@@ -56,10 +59,10 @@ int main() {
    tail->prev=a;
 
 
-  insert_at_any_pos(head,2,50);
-  insert_at_any_pos(head,3,500);
+  delete_at_any(head,1);
+  
+  // delete_at_head(head,tail);
   print_forward(head);
-
 
   print_backward(tail);
 
