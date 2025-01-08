@@ -51,9 +51,9 @@ void insert_at_tail (Node*&head, Node* &tail,int val){
     return;
   }
   else{
- tail->next= newNode;
-  newNode->prev = tail;
-  tail = newNode;
+    tail->next= newNode;
+    newNode->prev = tail;
+    tail = newNode;
   }
  
 };
@@ -100,8 +100,8 @@ int main() {
       if(X==0){
         // cout <<" X " << X <<" V " << V<<endl;
         insert_head(head,tail,V);
-         print_forward(head);
-       print_backward(head);
+        print_forward(head);
+        print_backward(head);
       }
       else if(X>length){
         cout<<"Invalid"<<endl;
