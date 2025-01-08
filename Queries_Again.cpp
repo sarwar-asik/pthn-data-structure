@@ -30,6 +30,17 @@ void print_backward(Node* tail){
   }
   cout <<endl;
 };
+
+void print_reverse_function(Node *temp){
+  // cout<<"R -> ";
+    if(temp==NULL){
+        return;
+    }  
+    print_reverse_function(temp->next);  //! recursion
+    cout << temp->val<<" ";
+  // cout <<endl;
+
+}
 void insert_head(Node* &head,Node*tail,int val){
   Node* newNode= new Node(val);
   if(head ==NULL){
@@ -83,10 +94,15 @@ int current_length_of_linked_list(Node*head){
     }
     return count;
 };
+
+
 int main() {
     // main code here
     Node* head =NULL;
     Node* tail =NULL;
+    
+    
+ // Node* newNode = new Node(val);
 
     int val;
     cin >> val;
@@ -96,19 +112,32 @@ int main() {
       // cout <<" X " << X <<" V " << V<<endl;
        
       int length = current_length_of_linked_list(head);
-      cout<<"length "<<length<<endl;
+      
+      // cout<<"length = "<<length;
       if(X==0){
+      Node* newNode = new Node(V);
+          if(head ==NULL){
+          head = newNode;
+          tail =newNode;
+        }
+        else{
+          newNode->next=head;
+          head->prev= newNode;
+          head = newNode;
+        }
         // cout <<" X " << X <<" V " << V<<endl;
-        insert_head(head,tail,V);
+        // insert_head(head,tail,V);
         print_forward(head);
-        print_backward(head);
+        print_backward(tail);
+        
       }
       else if(X>length){
         cout<<"Invalid"<<endl;
-        // // break;
+        // break;
         // return;
       }
       else if(X == length){
+        // cout<<"yess equal = "<<X;
         // tail->next=
         // insert_at_tail(head,tail,V);
         // Node* tempNode =new Node(V);
@@ -116,19 +145,49 @@ int main() {
         // tempNode->prev = tail;
         // tail = tempNode;
         insert_at_tail(head,tail,V);
-        print_forward(head);
-        print_backward(head);
+          print_forward(head);
+          print_backward(tail);
+
       }
       else{
-          // insert_at_any_pos(head,X,V);
-      //      print_forward(head);
-      //  print_backward(head);
+        // cout <<V<<"yess large ="<<X;
+        // insert_at_any_pos(head,X,V);  
+          // Node* NewNode = new Node(V);
+          // Node* tmp = head;
+          // for(int i =1; i<X;i++){
+          //     tmp = tmp->next;
+          // }
+          // // cout<< tmp->val<< endl;
+          // NewNode->next= tmp->next;
+          // tmp->next->prev = NewNode;
+          // tmp->next = NewNode; 
+        Node* NewTempNode = new Node(V);
+          Node* tmp = head;
+          for(int i =1; i<X-1;i++){ 
+            // if(tmp->next==NULL){
+            //   cout<<"Invalid"<<endl;
+            //   return;
+            // }
+
+              tmp = tmp->next;  
+          }
+          // cout<< tmp->val<< endl;
+          NewTempNode->next= tmp->next;
+          tmp->next->prev = NewTempNode;
+          tmp->next = NewTempNode;
+          // cout<< " temp "<< tmp->val<<endl; 
+           print_forward(head);
+          //  print_forward(head);
+          //  print_backward(tail);
+           cout<<"R -> ";
+          print_reverse_function(head);
+          cout<<endl;
       }
 
 
-
+      // cout<<"yess  = "<<X<<endl;
      
-
+      //  cout<<endl;
       
       // insert_at_any_pos(head,X,V);
     }
