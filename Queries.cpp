@@ -12,6 +12,7 @@ class Node
     }
 };
 
+
 void insert_at_tail(Node* &head, Node* &tail,int val){
   Node *newNode=new Node(val);
 
@@ -51,10 +52,23 @@ void insert_headFUn(Node * &head,int val){
 };
 
 void delete_at_any_pos(Node* &head,int idx){ //here do not need reference & bcz won't del head
+ 
+ if(idx<0 || head==NULL){
+  return;
+ }
+ if(idx ==0){
+  Node* deleteNOde= head;
+  head = head->next;
+  delete deleteNOde; 
+  return;
+ }
  Node* tempNode = head;
 
- for(int i= 1;i<idx;i++){
+ for(int i= 0;i<idx-1 && tempNode->next!=NULL;i++){
   tempNode = tempNode->next;  
+ }
+ if(tempNode->next==NULL){
+  return;
  }
  Node* deleteNOde= tempNode->next;
  tempNode->next = tempNode->next->next;
@@ -86,58 +100,36 @@ int main() {
         if(X==0){
             insert_headFUn(head,V);
             tail=head;
-              print_linked_list(head);
+              // print_linked_list(head);
         } 
 
 
         //// ! insert tail 
         else if(X==1){
 
-       if(V==60){
-              cout<<"h="<<head->val<<" t="<< tail->val << " issue in => ";
-               print_linked_list(head);
-            }
+      //  if(V==60){
+      //         cout<<"h="<<head->val<<" t="<< tail->val << " issue in => ";
+      //          print_linked_list(head);
+      //       }
             // cout << "tail = "<<tail->val<<endl;
-          
-            insert_at_tail(head,tail,V);
+            
+                       insert_at_tail(head,tail,V);
 
-            print_linked_list(head);
+            // print_linked_list(head);
         }
 
         /// ! delete at index
      else if(X==2){
         //  delete_at_any_pos(head,V);
-       
-        int length = current_length_of_linked_list(head);
-        if (V==0){
-        //    delete_at_any_pos(head,0);
-           Node* deleteNode = head;
-            head = head->next;
-            delete deleteNode;//! remove from memory 
-             print_linked_list(head);
+            int length = current_length_of_linked_list(head);
+            if(V>=0 && V<length){
+                  delete_at_any_pos(head,V); 
+                  ///print_linked_list(head);
+              }
         }
-        else if(V==length){
-            delete_at_any_pos(head,V);
-             print_linked_list(head);
-        }
-        else if(V<length){
-            delete_at_any_pos(head,V);
-            // Node* tempNode = head;
-            // for(int i= 1;i<V;i++){
-            //     tempNode = tempNode->next;  
-            // }
-            // Node* deleteNOde= tempNode->next;
-            // tempNode->next = deleteNOde->next;
-            
-            // delete deleteNOde; 
-             print_linked_list(head);
-        }
-        else{
-          print_linked_list(head);
-        }
-      
-         
-        }
+
+
+        print_linked_list(head);
       
      
         // insert_at_tail(head,tail,val);
