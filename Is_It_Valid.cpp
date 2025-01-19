@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-// https://www.hackerrank.com/contests/assignment-03-a-basic-data-structure-a-batch-06/challenges/is-it-valid-1-1/problem
 int main() {
     // main code here
 
