@@ -19,6 +19,11 @@ void postOrder(Node* root){
     postOrder(root->right);
     cout << root->val << " ";
 };
+// ! Post Order
+//    10
+//  20  30
+// 40 50 60
+//! output = 40 20 50 60 30 10 
 
 int main() {
     

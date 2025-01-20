@@ -13,20 +13,27 @@ class Node
       this->right=NULL;
     }
 };
-void inOrder(Node* root){
-    if(root==NULL)return; //! a function  return from same line
-    inOrder(root->left);
-    cout << root->val << " ";
-    inOrder(root->right);
+void levelOrder(Node* root){
+    queue<Node*>q;
+   
+   q.push(root);
+    while(!q.empty()){
+        Node*f = q.front();
+        q.pop();
+
+        cout << f->val << " ";
+
+       if(f->left) q.push(f->left);
+       if(f->right) q.push(f->right);
+    }
 };
-// ! pre Order
+// ! Level order traversal
 //    10
 //  20  30
 // 40 50 60
-//! output = 40 20 10 50 30 60 
-
+//! output = 10 20 30 40 50 60
 int main() {
-    
+    // main code here
     Node* root = new Node(10);
     Node* a = new Node(20);
     Node* b= new Node(30);
@@ -41,8 +48,7 @@ int main() {
     b->left=d;
     b->right=e;
 
-    inOrder(root);
-
+    levelOrder(root);
 
     return 0;
 }

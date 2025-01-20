@@ -13,12 +13,17 @@ class Node
       this->right=NULL;
     }
 };
-void postOrder(Node* root){
+void preOrder(Node* root){
     if(root==NULL)return; //! a function  return from same line
-    postOrder(root->left);
     cout << root->val << " ";
-    postOrder(root->right);
+    preOrder(root->left);
+    preOrder(root->right);
 };
+// ! pre Order
+//    10
+//  20  30
+// 40 50 60
+//! output = 10 20 40 30 50 60  
 
 int main() {
     
@@ -36,8 +41,7 @@ int main() {
     b->left=d;
     b->right=e;
 
-    postOrder(root);
-
+    preOrder(root);
 
 
     return 0;
