@@ -92,6 +92,7 @@ int main() {
     cin>>Q;
     while(Q--){
         int X,V;
+        
         cin>>X>>V;
        
         //! insert head
