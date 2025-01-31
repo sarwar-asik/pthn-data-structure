@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-// https://www.hackerrank.com/contests/assignment-04-a-basic-data-structure-a-batch-06/challenges/sum-without-leaf
+
+
 class Node
 {
     public:
     int val;
-    Node* left;   
-    Node* right;  
+    Node* left;   // pointer of the left address
+    Node* right;   // pointer of the right address
     Node(int val){
       this->val=val;
       this->left=NULL;
@@ -46,19 +47,33 @@ Node* input_tree(){
     return root;
     
 };
-int sum_without_leaf(Node* root){
-    if(root==NULL) return 0;
-    if(root->left==NULL && root->right==NULL) return 0;
 
-    int l = sum_without_leaf(root->left);
-    int r = sum_without_leaf(root->right);
-return l+r+root->val;    
-};
+bool searchValue(Node*root,int target){
+    if(root==NULL) return false;
+    if(root->val==target) return true;
 
+    if(root->val  == target) return true;
+    else if(root->val > target)
+     return searchValue(root->left,target);
+    else 
+     return searchValue(root->right,target);
+}
+
+//! input :: 20 10 30 5 15 25 40 -1 -1 -1 -1 -1 -1 35 50 -1 -1 -1 -1
+// 25
+// ! output :: Found
 int main() {
- 
-    Node* root= input_tree();   
-    cout<<sum_without_leaf(root)<<endl;
-    
+   
+    // cout<<"Enter the number of elements in the tree : ";
+   Node* root = input_tree();
+
+   int val;
+   cin>>val;
+
+   bool ans = searchValue(root,val); //! O(h)
+//    cout<<ans<<endl;
+  if(ans)cout <<"Found\n";
+   else cout<<"Not found\n";
+
     return 0;
 }
