@@ -23,3 +23,11 @@
 -  max heap = (large to small)
 -  min heap = (small to large)
 -  insert_max_heap = `O(logN)`
+
+
+### Priority 
+- it is better than array when sort data many time
+- maximum priority = `priority_queue<int> pq`
+- minimum priority =  ` priority_queue<int,vector<int>,greater<int>> min_pq;`
+- queue have front() and back() but priority have `top()` 
+ 
