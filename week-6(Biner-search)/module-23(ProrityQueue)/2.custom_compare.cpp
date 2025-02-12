@@ -10,7 +10,6 @@ class Student{
         this->name = name;
         this->roll = roll;
         this->marks = marks;
-
     }
 
 };

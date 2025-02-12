@@ -36,3 +36,8 @@
 - must name `operator` syntax
 - must use `()()` in operator function
 
+### STL Map
+
+- for 1 core data we have to define the size for `frequency array`.(so tough)
+- For this use `STL Map`. count anydataType int,string , anySize.
+- take memory based size
