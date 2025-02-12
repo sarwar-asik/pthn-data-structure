@@ -1,0 +1,4 @@
+3
+rakis 24 77
+takis 12 85
+skib 7 97

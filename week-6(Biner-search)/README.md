@@ -31,3 +31,8 @@
 - minimum priority =  ` priority_queue<int,vector<int>,greater<int>> min_pq;`
 - queue have front() and back() but priority have `top()` 
  
+#### custom compare create in Priority
+- create a `cmp` name class for custom compare 
+- must name `operator` syntax
+- must use `()()` in operator function
+
