@@ -40,4 +40,19 @@
 
 - for 1 core data we have to define the size for `frequency array`.(so tough)
 - For this use `STL Map`. count anydataType int,string , anySize.
-- take memory based size
+- take memory based size 
+- array must use int in key `user[100]` but map can take string like `user['roll']=20`.
+- Map structure `map_name[key]= value`
+- Map insert => `Log(N)` and print N number is `NlogN`
+- worse complexity to insert and print than array.
+
+
+## STL Set Data Type 
+
+- remove duplicate value like BST.
+- used InOrder travelsar for Sorted in BST.
+- `set<int>s;` is set.
+- can't `reverse` set directly but can by using vector.
+- for inset => `logN`. 
+- maintain a `balanced BST` in Map.
+- never height more logN in Set.
